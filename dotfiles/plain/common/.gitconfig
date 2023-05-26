@@ -1,0 +1,14 @@
+[user]
+	name = Tim Schneeberger
+	email = tim.schneeberger@outlook.de
+[core]
+	autocrlf = input
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = master
+[alias]
+	glog = log --graph --pretty=format:'%Cblue%ad%Creset -%Cred%d%C(yellow) %h %Creset%s %C(bold blue)<%an>%Creset' --date=short
