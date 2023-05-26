@@ -19,7 +19,7 @@ Random (Arch) Linux stuff that I'm actively using.
 * Enable [parallel pacman downloads](https://wiki.archlinux.org/title/pacman#Enabling_parallel_downloads).
 * Use an user-land OOM prevention daemon such as [nohang](https://github.com/hakavlad/nohang) to prevent freezes and lock-ups due oom-killer's behavior.
 * Set [sane sysctl values](https://wiki.archlinux.org/title/sysctl#Virtual_memory) for virtual memory. My sysctl config: [/etc/sysctl.d/99-custom.conf](system_config/etc/sysctl.d/99-custom.conf)
-* Chromium: enable [touchpad gestures](https://wiki.archlinux.org/title/Chromium#Touchpad_Gestures_for_Navigation) for navigation
+* Chromium: enable [touchpad gestures](https://wiki.archlinux.org/title/Chromium#Touchpad_Gestures_for_Navigation) for navigation. My flags: [~/.config/chrome-flags.conf](dotfiles/plain/common/.config/chrome-flags.conf)
 * Chromium: [store cache/profile directory in tmpfs](https://wiki.archlinux.org/title/Chromium#Tmpfs) for faster access as the frequently accessed data is now stored in RAM. Use [profile-sync-daemon](https://wiki.archlinux.org/title/Profile-sync-daemon) to sync the profile directory periodically back to disk. (Also available for [Firefox](https://wiki.archlinux.org/title/Firefox/Profile_on_RAM))
 * Sync and manage your dotfiles using git (or a git wrapper such as [dotgit](https://github.com/kobus-v-schoor/dotgit)) between multiple machines.
 
@@ -35,11 +35,3 @@ Random (Arch) Linux stuff that I'm actively using.
 * [timeshift](https://github.com/linuxmint/timeshift) - System restore tool for Linux
 * [tmux](https://github.com/tmux/tmux/) - Terminal multiplexer
 * [xpra](https://github.com/Xpra-org/xpra) - Persistent remote applications for X11
-
-
-
-
-
-
-chrome-flags
-
