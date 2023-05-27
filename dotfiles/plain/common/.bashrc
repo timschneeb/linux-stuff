@@ -25,6 +25,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+shopt -s autocd
+
 # custom paths
 export PATH="$PATH:/home/tim/.dotnet/tools:/home/tim/.local/bin:/var/lib/snapd/snap/bin:/home/tim/.local/share/gem/ruby/3.0.0/bin"
 
