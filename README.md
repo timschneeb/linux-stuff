@@ -22,6 +22,7 @@ Random (Arch) Linux stuff that I'm actively using.
 * Chromium: enable [touchpad gestures](https://wiki.archlinux.org/title/Chromium#Touchpad_Gestures_for_Navigation) for navigation. My flags: [~/.config/chrome-flags.conf](dotfiles/plain/common/.config/chrome-flags.conf)
 * Chromium: [store cache/profile directory in tmpfs](https://wiki.archlinux.org/title/Chromium#Tmpfs) for faster access as the frequently accessed data is now stored in RAM. Use [profile-sync-daemon](https://wiki.archlinux.org/title/Profile-sync-daemon) to sync the profile directory periodically back to disk. (Also available for [Firefox](https://wiki.archlinux.org/title/Firefox/Profile_on_RAM))
 * Sync and manage your dotfiles using git (or a git wrapper such as [dotgit](https://github.com/kobus-v-schoor/dotgit)) between multiple machines.
+* Keep your home dir clean from dotfiles ignoring the XDG basedir spec using [antidot](https://github.com/doron-cohen/antidot).
 
 ## Utilities
 

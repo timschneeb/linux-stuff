@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+eval "$(antidot init)"
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
