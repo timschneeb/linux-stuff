@@ -1,5 +1,5 @@
 .bashrc
 .tmux.conf
 .bash_profile
-.gitconfig
+.config/git/config
 .config/chrome-flags.conf
