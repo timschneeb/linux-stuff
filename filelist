@@ -3,3 +3,4 @@
 .bash_profile
 .config/git/config
 .config/chrome-flags.conf
+.config/tmux/tmux.conf

@@ -2,7 +2,13 @@
 # ~/.bashrc
 #
 
+
 eval "$(antidot init)"
+
+# Enforce XDG basedir 
+export KDEHOME="$XDG_CONFIG_HOME"/kde
+
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
