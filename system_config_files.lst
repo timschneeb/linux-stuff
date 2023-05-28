@@ -1,2 +1,3 @@
+/etc/environment
 /etc/sysctl.d/99-custom.conf
 /usr/share/libalpm/hooks/paccache.hook
