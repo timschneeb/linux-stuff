@@ -5,10 +5,12 @@
 
 eval "$(antidot init)"
 
+eval "$(zoxide init bash)"
+
 # Enforce XDG basedir 
 export KDEHOME="$XDG_CONFIG_HOME"/kde
 
-
+export NVD_BACKEND=direct
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -128,5 +130,44 @@ _open_files_for_editing() {
 
 alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 # alias pacdiff=eos-pacdiff
+################################################################################
+
+
+# kdesrc-build #################################################################
+
+## Add kdesrc-build to PATH
+export PATH="$HOME/kde/src/kdesrc-build:$PATH"
+
+
+## Autocomplete for kdesrc-run
+function _comp_kdesrc_run
+{
+  local cur
+  COMPREPLY=()
+  cur="${COMP_WORDS[COMP_CWORD]}"
+
+  # Complete only the first argument
+  if [[ $COMP_CWORD != 1 ]]; then
+    return 0
+  fi
+
+  # Retrieve build modules through kdesrc-run
+  # If the exit status indicates failure, set the wordlist empty to avoid
+  # unrelated messages.
+  local modules
+  if ! modules=$(kdesrc-run --list-installed);
+  then
+      modules=""
+  fi
+
+  # Return completions that match the current word
+  COMPREPLY=( $(compgen -W "${modules}" -- "$cur") )
+
+  return 0
+}
+
+## Register autocomplete function
+complete -o nospace -F _comp_kdesrc_run kdesrc-run
+
 ################################################################################
 

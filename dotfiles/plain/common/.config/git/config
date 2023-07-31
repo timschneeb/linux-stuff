@@ -12,3 +12,7 @@
 	defaultBranch = master
 [alias]
 	glog = log --graph --pretty=format:'%Cblue%ad%Creset -%Cred%d%C(yellow) %h %Creset%s %C(bold blue)<%an>%Creset' --date=short
+[url "https://invent.kde.org/"]
+	insteadOf = kde:
+[url "ssh://git@invent.kde.org/"]
+	pushInsteadOf = kde:
